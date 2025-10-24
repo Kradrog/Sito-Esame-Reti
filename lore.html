@@ -15,18 +15,71 @@
             <h1 style="padding-top: 1vh; color:blanchedalmond;font-size: 2.5rem;">LA INNER SPHERE</h1>
         </div>
         <div class="page_container">
-            <div style="width:60vw;z-index: 0;">
-                <img style="width: 60vw;opacity: 0.5;" src="Pictures/Inner_Sphere.png" >
-                <img style="width: 60vw;opacity: 0.5; z-index: 1;" src="Pictures/IS_Steiner.png" >
-                <img style="width: 60vw;opacity: 0.5; z-index: 1;" src="Pictures/IS_Draconis.png" >
-                <img style="width: 60vw;opacity: 0.5; z-index: 1;" src="Pictures/IS_FWL.png" >
-                <img style="width: 60vw;opacity: 0.5; z-index: 1;" src="Pictures/IS_Capellan.png" >
-                <img style="width: 60vw;opacity: 0.5; z-index: 1;" src="Pictures/IS_Federated_sunz.png" >
+            <div style="width:55vw;position: relative;float: left;min-width: 500px;">
+                <img style="width: 55vw;opacity: 0.5; z-index: 0;" src="Pictures/Inner_Sphere.png" >
+                <div style="z-index: 1;">
+                    <img class="img_overlay" id="Lyran" src="Pictures/IS_Steiner.png" >
+                    <img class="img_overlay" id="Draco"  src="Pictures/IS_Draconis.png" >
+                    <img class="img_overlay" id="FWL"  src="Pictures/IS_FWL.png" >
+                    <img class="img_overlay" id="Capellan"  src="Pictures/IS_Capellan.png" >
+                    <img class="img_overlay" id="Davion"  src="Pictures/IS_Federated_sunz.png" >
+                </div>
+
             </div>
+            <div style="width: 44vw;float: left;">
+                <div class="houses_button" onclick="expand(this, 'Lyran','Lyran_text')" >
+                    The Lyran Commonwealth
+                    <div id="Lyran_text" style="visibility: hidden;overflow:scroll;height:0vh">
+
+<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis libero ac ligula dapibus, non sagittis velit ultrices. Ut elementum tincidunt nunc, sed facilisis ante ornare et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel enim nec velit vestibulum tincidunt. Nunc et rhoncus felis. Vivamus mattis ac orci eu porttitor. Aliquam mollis tempus justo venenatis commodo. Sed placerat vitae sapien in vulputate. Maecenas faucibus tincidunt purus nec vulputate. Cras eleifend, lacus ac interdum feugiat, metus massa molestie dui, a posuere est magna nec nisl. Vivamus in volutpat leo. Nunc neque mi, maximus eget varius sed, placerat eu ante. Curabitur sapien orci, interdum nec facilisis ac, congue ut nisl. Etiam ligula enim, vestibulum sed mattis in, egestas sed metus. Cras quis enim elementum, ornare odio nec, laoreet ipsum.
+
+                    </div>
+                </div>
+                <div class="houses_button" onclick="expand(this, 'Draco')" style="background-color: darkred;">
+                    The Draconis Combine
+                </div>
+                <div class="houses_button" onclick="expand(this, 'FWL')" style="background-color: darkmagenta;">
+                    The Free Worlds League
+                </div>
+                <div class="houses_button" onclick="expand(this, 'Capellan')" style="background-color: darkgreen;">
+                    The Capellan Confederation
+                </div>
+                <div class="houses_button" onclick="expand(this, 'Davion')" style="background-color: darkgoldenrod;">
+                    The Federated Suns
+                </div>
+            </div>
+
 
         </div>
         <script src="https://www.gdprset.it/widget/gdpr-it-1.js" type="text/javascript"></script>
 
     </body>
+    <script>
+        function expand(element, id_img , id_text )
+        {
+            //Ricordare che le dimensioni sono in vh,
+            expanded=35;
+            collapsed=4;
+            reduced=expanded-collapsed;
+            h=element.style.height;
+            if(h==`${expanded}vh`)    //Spero esista un metodo migliore per le stringhe 
+            {
+                h=collapsed;
+                vis='hidden';
+            }
+            else
+            {
+                h=expanded;
+                vis='visible';
+            }
+            for (const child of element.children) {
+                child.style.visibility=vis;
+                child.style.height=`${(h-collapsed)}vh`;
+            }
+            element.style.height=`${(h)}vh`;
+            document.getElementById(id_img).style.visibility=vis;
+            
+        }
+    </script>
 </html>
 

@@ -17,6 +17,29 @@
     font-family: Arial, Helvetica, sans-serif;
     overflow: scroll;
 }
+.img_overlay
+{
+    width: 55vw;
+    opacity: 0.75;
+    position: absolute;
+    top:0;
+    visibility: hidden;
+}
+.houses_button
+{
+
+    width:44vw;
+    height:4vh;
+    position: relative;
+    float: left;
+    background-color: darkblue;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top:1vh;
+    text-align: center;
+    overflow: scroll;
+}
+
 
 .button_topbar
 {
