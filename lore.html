@@ -14,9 +14,9 @@
             </div>
             <h1 style="padding-top: 1vh; color:blanchedalmond;font-size: 2.5rem;">LA INNER SPHERE</h1>
         </div>
-        <div class="page_container">
-            <div style="width:55vw;position: relative;float: left;min-width: 500px;">
-                <img style="width: 55vw;opacity: 0.5; z-index: 0;" src="Pictures/Inner_Sphere.png" >
+        <div class="page_container" style="background-image: url(Pictures/space-universe-all.png);">
+            <div style="width:55vw;position: relative;float: left;min-width: 600px;">
+                <img style="width: 55vw;opacity: 0.8;min-width: 600px; z-index: 0;" src="Pictures/Inner_Sphere_light.png" >
                 <div style="z-index: 1;">
                     <img class="img_overlay" id="Lyran" src="Pictures/IS_Steiner.png" >
                     <img class="img_overlay" id="Draco"  src="Pictures/IS_Draconis.png" >
@@ -26,13 +26,45 @@
                 </div>
 
             </div>
-            <div style="width: 44vw;float: left;">
-                <div class="houses_button" onclick="expand(this, 'Lyran','Lyran_text')" >
+            <div style="width: 44%;float: left;min-width: 600px;">
+                <div class="houses_button" style="height: 30vh;background-color: rgba(245, 245, 245, 0);color: blanchedalmond;text-align: unset;" >
+                    <div style="background-color:rgb(1, 39, 56);height: 4vh;text-align: center;">
+                        The Inner Sphere
+                    </div>
+                    <div style="overflow: scroll;height: 26Vh;">
+                    <br>
+                        <div style="float: left;">
+                            <img  style="border-radius: 15%;" src="https://cfw.sarna.net/wiki/images/2/22/MilkyWay.jpg" width="160"  >
+                        </div>
+                        <p>
+                            La Zona di Galassia in un raggio di circa 500 anni luce attorno alla Terra è nota come Inner Sphere.
+                        </p>
+                        <p>
+                            Nel 3025 sono cinque i grandi protagonisti che si contendono il controllo assoluto di questo settore di Galassia, cinque Grandi Casate a capo di cinque Imperi pronte a tutto per riformare a propria immagine La Star League, l'antica Federazione che per 250 segno l'unità e la prosperità della Inner Sphere prima della sua inevitabile caduta.<br>
+                        </p>
+                        <p>
+                            La tensione sta salendo di nuovo ed un nuovo conflitto è all'orizzonte, le Grandi Casate stanno preparando di nuovo i propri eserciti e quel che resta de della loro potenza industriale ormai in declino dopo secoli di distruzione.
+                        </p>
+                        <p>
+                            Le varie potenze in gioco però non sanno che dietro le quinte una potenza nascosta sta tirando le redini, Comstar è per tutti nient'altro che la neutrale Agenzia Interstellare delle Comunicazioni, ultimo elemento vestigiale della antica Star League sopravvissuto alla sua dissoluzione.<br>
+                            Comstar però sa bene che avere il controllo della comunicazione dell'intera Inner Sphere vuol dire avere potere illimitato, un potere che può usare in qualsiasi momento e in qualsiasi modo porti vantaggio, senza che nessuno sospetti minimamente della cosa.
+                        </p>
+                    </div>
+                </div>
+                <div class="houses_button" onclick="expand(this, 'Lyran')" >
                     The Lyran Commonwealth
-                    <div id="Lyran_text" style="visibility: hidden;overflow:scroll;height:0vh">
-
-<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis libero ac ligula dapibus, non sagittis velit ultrices. Ut elementum tincidunt nunc, sed facilisis ante ornare et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel enim nec velit vestibulum tincidunt. Nunc et rhoncus felis. Vivamus mattis ac orci eu porttitor. Aliquam mollis tempus justo venenatis commodo. Sed placerat vitae sapien in vulputate. Maecenas faucibus tincidunt purus nec vulputate. Cras eleifend, lacus ac interdum feugiat, metus massa molestie dui, a posuere est magna nec nisl. Vivamus in volutpat leo. Nunc neque mi, maximus eget varius sed, placerat eu ante. Curabitur sapien orci, interdum nec facilisis ac, congue ut nisl. Etiam ligula enim, vestibulum sed mattis in, egestas sed metus. Cras quis enim elementum, ornare odio nec, laoreet ipsum.
-
+                    <div style="visibility: hidden;overflow:scroll;height:0vh;text-align: left;">
+                        <p>
+                            Potenza chiave della Sfera Interna, caratterizzata da una società orgogliosa nata dalla fusione di culture tedesca e scozzese.<br>
+                            Tharkad, capitale ghiacciata e ricca di risorse, ne è il cuore politico ed economico.<br>
+                            La Defiance Industries, con i suoi Mech iconici come Atlas e Zeus, rappresenta il diamante di un’economia tra le più solide della galassia.
+                        </p>
+                        <p>
+                            Governato da una nobiltà divisa in Landhold Counties, il Commonwealth vede lealtà e onore come valori fondamentali, ma la corruzione e le lotte interne ne minano la coesione.<br>
+                            Le LCAF, numerose ma poco innovative, prediligono tattiche dirette e ’Mech pesanti, mentre l’Arciduca Alessandro Steiner fatica a tenere unite le grandi famiglie nobili.<br>
+                            La tensione con il Draconis Combine rimane costante.
+                        </p>
+                        
                     </div>
                 </div>
                 <div class="houses_button" onclick="expand(this, 'Draco')" style="background-color: darkred;">
@@ -55,10 +87,10 @@
 
     </body>
     <script>
-        function expand(element, id_img , id_text )
+        function expand(element, id_img  )
         {
             //Ricordare che le dimensioni sono in vh,
-            expanded=35;
+            expanded=20;
             collapsed=4;
             reduced=expanded-collapsed;
             h=element.style.height;
