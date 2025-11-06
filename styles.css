@@ -47,6 +47,8 @@
 .button_topbar
 {
     height:2rem;
+    width:3vw;
+    min-width: 50px;
     background-color: green;
     border: 1px solid black;
     border-radius: 5px;
