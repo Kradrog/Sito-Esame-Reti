@@ -6,6 +6,12 @@
     </head>
     <body>
         <script src="https://www.gdprset.it/widget/gdpr-it-1.js" type="text/javascript"></script>
+        <script>
+            function Delete(id)
+            {
+                document.getElementById(id).style.display="none"
+            }
+        </script>
         <div id="topbar" class="topbar" style="text-align: center;" >
             <div style="float: left;padding-top: 2vh;height: 4vh;">
                 <a href="index.html"><button class="button_topbar">Home</button></a>
@@ -13,6 +19,17 @@
                 <a href="info.html"><button class="button_topbar">Info</button></a>
             </div>
             <h1 style="padding-top: 1vh; color:blanchedalmond;font-size: 2.5rem;">BATTLETECH: MECH MA NON SOLO</h1>
+        </div>
+        <div id="Disclaimer">
+            <h3>Disclaimer</h3>
+            <p style="font-size: 0.8rem;">
+                Questo sito web è stato realizzato a scopo esclusivamente didattico e accademico, come parte di un progetto universitario.<br>
+                Sarà accessibile al pubblico solo per un periodo limitato, necessario alla valutazione del corso.<br>
+                Tutti i marchi registrati, i nomi commerciali, i loghi e le immagini presenti in questo sito (inclusi, a titolo esemplificativo, "BattleTech", i nomi e le immagini dei Mech, e ogni altro materiale protetto da copyright) sono di proprietà dei rispettivi detentori dei diritti.<br>
+                L’utilizzo di tali materiali è finalizzato unicamente a fini di studio, analisi e discussione accademica, senza alcuno scopo di lucro. Non si intende violare alcuno dei diritti di proprietà intellettuale dei legittimi titolari.<br>
+                Qualora i detentori dei diritti ritengano che la presenza di determinati contenuti in questo sito violi i loro diritti, sono invitati a contattare l’<a href="https://github.com/Kradrog">autore</a> del progetto per la pronta rimozione degli stessi.
+            </p>
+            <button onclick="Delete('Disclaimer')">Ho Capito</button>
         </div>
         <div class="page_container" style="background-image: url(Pictures/BannerinoBB.png);background-repeat: no-repeat;background-size:cover;">
             <div class="text_box" style="width:49%;">
